@@ -1,4 +1,5 @@
 #!/bin/sh
+# //
 set -e
 
 BIN="./stellar-disbursement-platform"
