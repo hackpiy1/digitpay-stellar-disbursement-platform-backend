@@ -19,7 +19,7 @@ FROM alpine:3.23
 RUN apk add --no-cache ca-certificates
 # ADD migrations/ /app/migrations/
 COPY --from=build /bin/stellar-disbursement-platform /app/
-COPY dev/scripts/start.sh /app/start.sh
+COPY scripts/start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 EXPOSE 8001
 WORKDIR /app
