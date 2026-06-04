@@ -21,6 +21,6 @@ RUN apk add --no-cache ca-certificates
 COPY --from=build /bin/stellar-disbursement-platform /app/
 COPY scripts/start.sh /app/start.sh
 RUN chmod +x /app/start.sh
-EXPOSE 8001
+EXPOSE 8000
 WORKDIR /app
 ENTRYPOINT ["/bin/sh", "/app/start.sh"]
