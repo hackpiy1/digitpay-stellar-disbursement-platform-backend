@@ -7,7 +7,7 @@ services:
       POSTGRES_DB: ${DATABASE_NAME:-sdp_mtn}
       PGDATA: /data/postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres-db:/data/postgres
   sdp-api:
