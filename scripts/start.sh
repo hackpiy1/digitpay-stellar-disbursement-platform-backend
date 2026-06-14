@@ -27,5 +27,8 @@ $BIN tenants ensure-default \
   --default-tenant-distribution-account-type "${DEFAULT_TENANT_DISTRIBUTION_ACCOUNT_TYPE:-DISTRIBUTION_ACCOUNT.STELLAR.ENV}" \
   --sdp-ui-base-url "${SDP_UI_BASE_URL:-$BASE_URL}"
 
+echo "Ensuring channel accounts exist..."
+$BIN channel-accounts ensure --num-channel-accounts "${NUM_CHANNEL_ACCOUNTS:-3}"
+
 echo "Starting server..."
 exec $BIN serve
