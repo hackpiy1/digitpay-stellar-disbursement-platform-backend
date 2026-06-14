@@ -28,7 +28,7 @@ $BIN tenants ensure-default \
   --sdp-ui-base-url "${SDP_UI_BASE_URL:-$BASE_URL}"
 
 echo "Ensuring channel accounts exist..."
-$BIN channel-accounts ensure --num-channel-accounts "${NUM_CHANNEL_ACCOUNTS:-3}"
+$BIN channel-accounts ensure "${NUM_CHANNEL_ACCOUNTS:-3}"
 
 echo "Starting server..."
 exec $BIN serve
