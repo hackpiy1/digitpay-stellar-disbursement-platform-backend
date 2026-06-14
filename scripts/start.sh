@@ -30,5 +30,8 @@ $BIN tenants ensure-default \
 echo "Ensuring channel accounts exist..."
 $BIN channel-accounts ensure "${NUM_CHANNEL_ACCOUNTS:-3}"
 
+echo "Starting Transaction Submission Service..."
+$BIN tss &
+
 echo "Starting server..."
 exec $BIN serve
